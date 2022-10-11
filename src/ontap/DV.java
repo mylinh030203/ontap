@@ -173,7 +173,7 @@ public class DV {
 	
 
 	public static void main(String[] args) {
-//		ArrayList<DongVat> ListDV = new ArrayList<DongVat>();
+		ArrayList<DongVat> ListDV = new ArrayList<DongVat>();
 		ArrayList<Dogs> ListDogs = new ArrayList<Dogs>();
 		ArrayList<Cats> ListCats = new ArrayList<Cats>();
 		ArrayList<Horses> ListHorses = new ArrayList<Horses>();
@@ -182,7 +182,7 @@ public class DV {
 			System.out.println("input the dog number "+i);
 			Dogs dg = new Dogs();
 			dg.input();
-			ListDogs.add(dg);
+			ListDV.add(dg);
 		}
 		
 		
@@ -191,7 +191,7 @@ public class DV {
 			System.out.println("input the cat number "+i);
 			Cats ct = new Cats();
 			ct.input();
-			ListCats.add(ct);
+			ListDV.add(ct);
 		}
 		
 		
@@ -200,70 +200,63 @@ public class DV {
 			System.out.println("input the horse number "+i);
 			Horses hr = new Horses();
 			hr.input();
-			ListHorses.add(hr);
+			ListDV.add(hr);
 		}
 		
 		//output
-		System.out.println("----List Dog----");
-		for (Dogs dog : ListDogs) {
-			System.out.println(dog.toString());
-		}
-		System.out.println("----List Cat----");
-		for (Cats cat : ListCats) {
-			System.out.println(cat.toString());
+		System.out.println("----List DV----");
+		for (DongVat dv : ListDV) {
+			if(dv.getClass() == Dogs.class)
+				System.out.println((((Dogs)dv).toString()));
+			if(dv.getClass() == Cats.class)
+				System.out.println((((Cats)dv).toString()));
+			if(dv.getClass() == Horses.class)
+				System.out.println((((Horses)dv).toString()));
 		}
 		
-		System.out.println("----List Horse----");
-		for (Horses horse : ListHorses) {
-			System.out.println(horse.toString());
-		}
-		 
 		//age >1
-		System.out.println("List Dog have age >1");
-		for (Dogs dog : ListDogs) {
-			if(dog.Compare()==1)
-				System.out.println(dog.toString());
+		System.out.println("List Dv have age >1");
+		for (DongVat dv : ListDV) {
+			if(dv.getClass() == Dogs.class && dv.Compare()==1)
+				System.out.println((((Dogs)dv).toString()));
+			if(dv.getClass() == Cats.class&&dv.Compare()==1)
+				System.out.println((((Cats)dv).toString()));
+			if(dv.getClass() == Horses.class&&dv.Compare()==1)
+				System.out.println((((Horses)dv).toString()));
+//			if(dv.Compare()==1)
+//				System.out.println(dv.toString());
+//			
 		}
-		System.out.println("List Cat have age >1");
-		for (Cats cat : ListCats) {
-			if(cat.Compare()==1)
-				System.out.println(cat.toString());
-		}
-		
-		System.out.println("List Horse have age >1");
-		for (Horses horse : ListHorses) {
-			if(horse.Compare()==1)
-				System.out.println(horse.toString());
-		}
+
 		
 		//rate >100
-		System.out.println("List Dog have rate >100");
-		for (Dogs dog : ListDogs) {
-			if(dog.rate()==1)
-				System.out.println(dog.toString());
+		System.out.println("List DV have rate >100");
+		for (DongVat dv : ListDV) {
+			if(dv.getClass() == Dogs.class) {
+				if(((Dogs)dv).rate()==1)
+				System.out.println(((Dogs)dv).toString());
+			}if(dv.getClass() == Horses.class) {
+				if(((Horses)dv).rate()==1)
+				System.out.println(((Horses)dv).toString());
+			}
 		}
 		
 		
-		System.out.println("List Horse have rate >100");
-		for (Horses horse : ListHorses) {
-			if(horse.rate()==1)
-				System.out.println(horse.toString());
-		}
+		
 		
 		//weight >5
 		System.out.println("List Dog have weight >5");
-		for (Dogs dog : ListDogs) {
-			if(dog.weight()==1)
-				System.out.println(dog.toString());
-		}
-		System.out.println("List Cat have weight >5");
-		for (Cats cat : ListCats) {
-			if(cat.weight()==1)
-				System.out.println(cat.toString());
-		}
+		for (DongVat dv : ListDV) {
+			
+			if(dv.getClass() == Cats.class) {
 		
-		
-
+				if(((Cats)dv).weight()==1)
+					System.out.println(((Cats)dv).toString());
+		}	
+			if(dv.getClass() == Dogs.class) {
+				if(((Dogs)dv).weight()==1)
+					System.out.println(((Dogs)dv).toString());
+			}
+		}
 	}
-
 }
