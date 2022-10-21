@@ -9,7 +9,28 @@ public class Sinhvien {
 	private double toan;
 	private double ly;
 	private double hoa;
-	
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
 	public double getToan() {
 		return toan;
 	}
@@ -37,26 +58,6 @@ public class Sinhvien {
 
 	public void setHoa(double hoa) {
 		this.hoa = hoa;
-	}
-
-
-	private String getName() {
-		return name;
-	}
-
-
-	private void setName(String name) {
-		this.name = name;
-	}
-
-
-	private int getAge() {
-		return age;
-	}
-
-
-	private void setAge(int age) {
-		this.age = age;
 	}
 
 
