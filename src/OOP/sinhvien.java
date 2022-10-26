@@ -9,6 +9,19 @@ public class sinhvien {
 	private double TDC;
 	private double CSDL;
 	
+	public sinhvien() {
+		
+	}
+	
+	public sinhvien(String Masv, String Name, double Java, double TDC, double CSDl) {
+		this.Masv = Masv;
+		this.Name = Name;
+		this.Java = Java;
+		this.TDC = TDC;
+		this.CSDL = CSDl;
+		
+	}
+	
 	public String getMasv() {
 		return Masv;
 	}
