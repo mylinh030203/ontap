@@ -14,9 +14,10 @@ public class student {
 //			sv[i].output();
 //			System.out.println("Diem trung binh cua "+sv[i].getName()+" la: "+sv[i].dtb()); 
 //		}
-		sinhvien sv = new sinhvien();
 		
-//		sv.output();
+		sinhvien sv = new sinhvien("1","1",1,1,1);
+		sv.output();
+//		sv.input();
 //		System.out.println("diem trung binh cua sinh vien "+sv.getName()+" la :"+sv.dtb());
 	}
 

@@ -10,7 +10,7 @@ public class sinhvien {
 	private double CSDL;
 	
 	public sinhvien() {
-		
+//		System.out.println("a");
 	}
 	
 	public sinhvien(String Masv, String Name, double Java, double TDC, double CSDl) {
@@ -19,6 +19,7 @@ public class sinhvien {
 		this.Java = Java;
 		this.TDC = TDC;
 		this.CSDL = CSDl;
+//		output();
 		
 	}
 	
