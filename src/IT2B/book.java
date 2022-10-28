@@ -5,17 +5,13 @@ public class book {
 	private int id;
 	private double price;
 	private int quantity;
+	private author author;
 	
 	public book() {
-			
+		System.out.println("total price is "+totalPrice());	
 	}
 	
-	public book(String name, int id, double price, int quantity) {
-		this.name = name;
-		this.id = id;
-		this.price = price;
-		this.quantity =quantity;
-	}
+	
 	
 	public int getQuantity() {
 		return quantity;
@@ -43,7 +39,21 @@ public class book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	 public void output() {
+	
+	
+	 public author getAuthor() {
+		return author;
+	}
+
+
+
+	public void setAuthor(author author) {
+		this.author = author;
+	}
+
+
+
+	public void output() {
 		 System.out.println("Name is "+this.name);
 		 System.out.println("ID is "+this.id);
 		 System.out.println("price is "+getPrice());
@@ -55,9 +65,13 @@ public class book {
 	 }	
 	public static void main(String[] args) {
 		
-		book b = new book("hgjsdf",1,40000,5);
+		book b = new book();
+		author a= new author();
+		a.setName("abc");
+		b.setAuthor(a);
+		System.out.println(b.getAuthor().getName());
 		b.output();
-		System.out.println("total price is "+b.totalPrice());
+		
 	}
 
 }
