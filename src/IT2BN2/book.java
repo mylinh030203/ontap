@@ -11,14 +11,14 @@ public class book {
 		
 	}
 	
-//	public book(String name, double price, int quantity, author author) {
-//		this.name = name;
-//		this.price = price;
-//		this.quantity = quantity;
-//		this.author = author;
-//		System.out.println("havana");
-//		
-//	}
+	public book(String name, double price, int quantity, author author) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+		this.author = author;
+		System.out.println("havana");
+		
+	}
 	public String getName() {
 		return name;
 	}
@@ -59,6 +59,8 @@ public class book {
 		
 		book b = new book();
 		author a = new author("1");
+		
+		b.getName();
 		b.setAuthor(a);
 		System.out.println(b.getAuthor().getName());
 		
