@@ -7,6 +7,7 @@ public class book {
 	private String tenSach;
 	private author Author;
 	
+	
 	public book() {
 //		this.maSach =1;
 //		this.tenSach ="a";
