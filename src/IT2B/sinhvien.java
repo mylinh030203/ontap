@@ -1,20 +1,23 @@
 package IT2B;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 public class sinhvien {
 	private int masv;
 	private String ten;
-	private diem d;
+	
+	
+	Vector<sinhvien> vtSinhvien = new Vector<sinhvien>();
 	
 
 	public sinhvien() {
 		
 	}
-	public sinhvien(int masv, String Ten, diem d) {
+	public sinhvien(int masv, String Ten ) {
 		this.masv = masv;
 		this.ten = Ten;
-		this.d = d;
+		
 		System.out.println("a");
 	}
 	
@@ -32,27 +35,27 @@ public class sinhvien {
 		this.ten = ten;
 	}
 	
-	public diem getD() {
-		return d;
+
+	public void input() {
+		Scanner sc = new Scanner(System.in);
+		this.masv = sc.nextInt();
+		this.ten = sc.nextLine();
 	}
-	public void setD(diem d) {
-		this.d = d;
+	
+	public void add() {
+
+		for(int i = 0; i< 2; i++) {
+			sinhvien sv = new sinhvien();
+			sv.input();
+			vtSinhvien.add(sv);
+			
+		}
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		diem d = new diem();
-		System.out.println("nhap vao diem toan ");
-		double toan = sc.nextDouble();
-		d.setToan(toan);
-		System.out.println("nhap vao diem ly ");
-		double ly = sc.nextDouble();
-		d.setLy(ly);
-		System.out.println("nhap vao diem hoa ");
-		double hoa = sc.nextDouble();
-		d.setHoa(hoa);
+		
 		sinhvien sv = new sinhvien();
-		sv.setD(d);
-		System.out.println(sv.getD().dtb());
+		
 		
 	}
 
