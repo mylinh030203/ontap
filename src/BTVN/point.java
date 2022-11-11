@@ -3,6 +3,7 @@ package BTVN;
 import java.util.Scanner;
 
 public class point {
+	
 	private double java, c, sql;
 
 	public point() {

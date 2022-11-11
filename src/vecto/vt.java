@@ -23,6 +23,7 @@ public class vt {
 //		}
 		for(int i = 0; i<v.size(); i++) {
 			System.out.println(v.get(i));
+			v.set(i,1);
 		}
 
 	}
